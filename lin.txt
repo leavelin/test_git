@@ -1,7 +1,0 @@
-aaaaaaaa
-vvvvvvv
-<<<<<<< HEAD
-test ssh
-=======
-update test
->>>>>>> de7866243b4f1ae93b0f9164dafe7cf5edbc367e
