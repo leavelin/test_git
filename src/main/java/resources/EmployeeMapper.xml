@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lin.mybatis.dao.EmployeeMapper">
+<!-- 
+namespace:名称空间;指定为接口的全类名
+id：唯一标识
+resultType：返回值类型
+#{id}：从传递过来的参数中取出id值
+
+public Employee getEmpById(Integer id);
+ -->
+	<select id="getEmpById" resultType="com.lin.mybatis.pojo.Employee">
+		select id, last_name, email, gender from tbl_emp where id = #{id}
+	</select>
+
+	<insert id="insertEmp">
+		insert into tbl_emp(last_name, email, gender) values(#{lastName}, #{email}, #{gender})
+	</insert>
+
+	<update id="updateEmp">
+		update tbl_emp set last_name = #{lastName}, email = #{email}, gender = #{gender}
+	</update>
+	
+	<delete id="deletaEmpById">
+		delete from tbl_emp where id = #{id}
+	</delete>
+</mapper>
