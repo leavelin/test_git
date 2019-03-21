@@ -3,12 +3,14 @@ package com.lin.mybatis.dao;
 import com.lin.mybatis.pojo.Employee;
 
 public interface EmployeeMapper {
-	
-	public Employee getEmpById(Integer id);
 
-	public Integer insertEmp(Employee employee);
+    Employee getEmpById(Integer id);
 
-	public void updateEmp(Employee employee);
+	Integer insertEmp(Employee employee);
 
-	public void deleteEmpById(Integer id);
+	void updateEmp(Employee employee);
+
+	void deleteEmpById(Integer id);
+
+	void inserEmps(String ids);
 }
